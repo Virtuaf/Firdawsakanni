@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+   body{
+       background: no-repeat;
+       background-image:url(img_mount.png);
+       background-size: cover;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   header{
+        color:rgb(0, 0, 0);
+    }
+   div{
+    background-color:rgba(244, 252, 255, 0.322);
+   }
+   a{
+              font-size: x-large;
+
+              text-align: left;
+          }
+    #name-101{
+              font-family: Arial, Helvetica, sans-serif;
+              font-style: italic;
+              font-size: 200px;
+              font-weight: 50px;
+              color: rgb(96, 67, 124);
+          }
+    #facts{
+        border: 2px dotted;
+        height: 100px;
+        width: auto;
+        border-collapse: collapse;
+        color: rgb(27, 4, 48);
+    }
+    td{
+        padding: 5px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    th{
+        text-align: left;
+    }
+    .introduc{
+        font-style: normal;
+    }
+    .tablefact{
+        border-right: 2px dotted;
+    }
+    .tablerow{
+        border-bottom: 2px dotted;
+    }
+    #buton{
+        display:none; /*Hidden by default*/
+        position:fixed;/*Fixed/sticky  position*/
+        bottom:20px; /*Place the button at the bottom of the page*/
+        left:50px; /*Place the button 50px from the left*/
+        z-index: 2; /* Make sure it doesn't overlap*/
+        border:none; /*Remove borders*/
+        outline:none; /*Remove outline*/
+        background-color: blue; /*Set a backgound color*/
+        color:white; /*Text color*/
+        cursor:pointer;
+        padding:15px; /*Some padding*/
+        border-radius: 10px;/*Rounded corners*/
+        font-size: 20px;/*Increase font size*/
+    }
+    #buton:hover{
+        background-color: cadetblue;
+    }
+    footer{ background-color:goldenrod;
+    }
+</style>
+<title>Home Page</title>
+</head>
+<body>
+    <header href="the-top">
+        <image  style="color:transparent" src="data:image/jpeg;base64,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" 
+        alt="The altschool logo"></image><br><br><br>
+        <nav><a href="Home Page.html">&nbsp;Home Page&nbsp;</a>
+        <a href="About.html">&nbsp;About&nbsp;</a>
+        <a href="Apply.html">&nbsp;Apply&nbsp;</a>
+        <a href="Author.html">&nbsp;Author&nbsp;</a></nav>
+        <span id='name-101'>Firdaws</span><br>
+    </header>
+<div class="introduc">
+    <h1>Webpage defining Firdaws to you</h1>
+<h2>MEET Firdaws Akanni</h2>
+<p>Firdaws hails from Oyo state in Nigeria and <em>resides in Lagos state, Nigeria.</em> 
+    She is the elder and only daughter of the Akanni family, has a younger brother and <em>recently finished secondary school.</em> 
+    She now attends Altschool while <em>preparing for university studies</em> her altschool ID is <strong>ALT/SOE/024/0254.</strong><br>
+Firdaws is about to be seventeen born on the 25th of september 2007 and has the <em>Myers Briggs</em> personality type (MBTI) INTP-A. 
+She is roughly <strong>153 centimeters</strong> tall although she swears she is shorter than that and constantly forgets her legal first name.
+She attended four different schools throughout her secondary school career, her bestfriend's name is Oreoluwa.<br>
+She loves reading paperback novels, webnovels, e-novels, comics, webtoons, manhwa all kinds of stories.
+She likes pasta, alpenliebe, kopiko, dark choco and vanilla icecream the most. Her favorite party meal is jollof rice.</p>
+</div>
+<h2> Autobiography </h2>
+<p>A biography consists of so many things so I'm makinng a list.</p>
+<ul> <h3>Name</h3>
+    <li> Surname- Akanni</li>
+    <li> Firstname- Firdaws</li>
+    <li> Middlename- Anjolaoluwa</li>
+    <li> Other names- Adunni etc.</li>
+    <h3>Family</h3>
+    <li> Father- Akanni Olatunji Rasheed</li>
+    <li> Mother- Akanni Samiat Oluwafunmi</li>
+    <li> Brother- Akanni Fareed Omokolapo</li>
+    <li> Maternal relatives- 4 aunts, 5 uncles</li>
+    <li> Paternal relatives- 2 aunts, 3 uncles</li>
+    <h3>Education</h3><ol>
+    <li> Fehintola Schoolmate- primary</li>
+    <li> Marvins education- secondary</li>
+    <li> Harmony land college- secondary</li>
+    <li> Limelight springs college- secondary</li>
+    <li> Debisland Schools- secondary</li></ol>
+    <h3>Challenges</h3>
+    <li> Was diagnosed after suffering from seizures at age 8 and spent three years (10-13) using epilim syrup.</li>
+    <h3>Accomplishments</h3>
+    <li> Best in Physics, English and Economics</li>
+    <li> WAEC scores on one A, five B's and three C's</li>
+    <li> Assistant head girl</li>
+    <li> Best in chemistry</li>
+    <li> BECE scores of seven A's and three C's.</li>
+    <li> Overall Best in Primary 5</li>
+    <li> Prefectship</li>
+    <h3>Area of Expertise</h3>
+    <li> Languages including- English, Yoruba, German, Korean, Chinese and Japanese</li>
+    <Li> Culture and history</Li>
+    <li> Creative writing such as Writing Novels, Essays, Poems, Letters, Debates and Articles.</li>
+    <li> Baking desserts e.g Cake, cupcake, panake, pie etc.</li>
+    <hs>Hobbies</hs>
+    <li> Reading</li>
+    <li> Baking</li>
+    <li> Writing</li>
+    <li> Drawing</li>
+    <li> Sightseeing</li>
+    <li> Online window shopping</li>
+    <li> Sleeping</li>
+    <li> Coding</li>
+</ul>
+<h2>Other Information</h2>
+<table id="facts">
+    <thead>
+        <tr class="tablerow">
+            <th class="tablefact">Rare facts about me</th>
+            <th>Favorite books</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow"><td class="tablefact">I don't like raising my head or looking up</td> <td>I hope this doesn't find you</td></tr>
+        <tr class="tablerow"><td class="tablefact">I am an ambivert</td><td>A secret service</td></tr>
+        <tr class="tablerow"><td class="tablefact">I love all forms of art especially nature paintings</td><td>Not here to be liked</td></tr>
+        <tr class="tablerow"><td class="tablefact">I have only cried because of fiction five times</td><td>Dorming with the jocks</td></tr>
+        <tr class="tablerow"><td class="tablefact">My all-time favorite book is Betting on you</td><td>Better than the movies</td></tr>
+        <tr class="tablerow"><td class="tablefact">My favorite male mc is Betting on you's charlie sampson</td><td>Today,tonight,tommorow</td></tr>
+    </tbody>
+</table>
+<div>
+    <h2>Why I joined Altshool</h2>
+    <p> I joined Altschool with one purpose in mind; being able to work in the IT sector, specifically cloud engineering.
+        Pursuing studies in cloud engineering will allow me to diversify in the industry for example I can work with AI 
+        systems, or develop apps and websites, work at companies etc.<br> But, I also didn't want to be a lone ranger in the
+        IT field so I decided to join altschool I would belong to a community which will also make 
+        it easier and faster for me recognize career opportunities. 
+    </p>
+    <h2>My SOE goals</h2>
+    <p>I had no idea that altschool was divided into three different schools before I joined. 
+        The SOE programme is incredible, and I am so grateful to be part of it.<br>
+        I am studying the SOE programme so that I can achieve a certificate in cloud engineering, 
+        and get a job which I will use to support my academic financials. Then I want to start a 
+        few of my own projects which I am currently preparing.
+    </p>
+</div>
+<footer>
+    <button onclick="topFunction()" id="buton" title="Back to the top">Back to the top</button>
+    <span>&nbsp;Goodbye&nbsp;</span>
+    <span>&nbsp;firdawskanni07@gmail.com&nbsp;</span>
+    <span>&nbsp;09074181071&nbsp;</span>
+</footer>
+</body>
